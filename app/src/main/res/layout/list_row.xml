@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="dataList"
+            type="com.example.databinding.Data" />
+        <variable
+            name="context"
+            type="android.content.Context" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:padding="5dp"
+        android:onClick="@{()->dataList.make(context)}"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:toUpperCase="@{dataList.header}"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{dataList.description}"
+            android:textColor="@color/black"
+            android:textSize="13dp" />
+    </LinearLayout>
+</layout>
