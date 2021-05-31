@@ -1,5 +1,6 @@
 package com.example.databinding;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,7 +30,7 @@ public class DataAdapter extends ArrayAdapter<Data> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        ListRowBinding listRowBinding = DataBindingUtil.inflate(layoutInflater, R.layout.list_row, parent, false);
+         ListRowBinding listRowBinding = DataBindingUtil.inflate(layoutInflater, R.layout.list_row, parent, false);
         listRowBinding.setDataList(dataList.get(position));
         listRowBinding.setContext(context);
         return listRowBinding.getRoot();

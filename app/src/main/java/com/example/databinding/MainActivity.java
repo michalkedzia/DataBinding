@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding activityMainBinding;
     private ArrayList<Data> dataList = new ArrayList<>();
-    ;
     private DataAdapter dataAdapter;
 
     @Override
